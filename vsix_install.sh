@@ -16,6 +16,6 @@ for vsix in ./vsix/*.vsix; do
     unzip "tmp/${NAME}.zip" -d "tmp/${NAME}"
 
     mv "tmp/${NAME}/extension" ${OUT}/${NAME}
-    rm -rf "tmp"
 done
 
+rm -rf "tmp"
