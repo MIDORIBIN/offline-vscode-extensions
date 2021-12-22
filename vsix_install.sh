@@ -2,20 +2,21 @@
 set -euox pipefail
 cd "$(dirname "$0")"
 
-
+TMP="./tmp"
 OUT="${HOME}/.vscode-server/extensions"
 
-mkdir -p "tmp"
+mkdir -p ${OUT}
+mkdir -p ${TMP}
 
 for vsix in ./vsix/*.vsix; do
     NAME=${vsix##*/}
     NAME=${NAME%.*}
 
-    cp ${vsix} "tmp/${NAME}.zip"
-    mkdir "tmp/${NAME}"
-    unzip "tmp/${NAME}.zip" -d "tmp/${NAME}"
+    cp ${vsix} "${TMP}/${NAME}.zip"
+    mkdir "${TMP}/${NAME}"
+    unzip "${TMP}/${NAME}.zip" -d "${TMP}/${NAME}"
 
-    mv "tmp/${NAME}/extension" ${OUT}/${NAME}
+    mv "${TMP}/${NAME}/extension" ${OUT}/${NAME}
 done
 
-rm -rf "tmp"
+rm -rf ${TMP}
