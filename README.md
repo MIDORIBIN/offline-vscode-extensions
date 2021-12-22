@@ -3,5 +3,5 @@
 ## install
 
 ```sh
-curl https://raw.githubusercontent.com/MIDORIBIN/offline-vscode-extensions/main/install.sh | bash
+wget -O - https://raw.githubusercontent.com/MIDORIBIN/offline-vscode-extensions/main/install.sh | bash
 ```
