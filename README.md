@@ -1,5 +1,10 @@
 # offline-vscode-extensions
 
+## dependence
+
+* wget
+* unzip
+
 ## install
 
 ```sh
