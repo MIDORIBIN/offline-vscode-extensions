@@ -4,11 +4,12 @@ cd "$(dirname "$0")"
 
 TMP="./tmp"
 OUT="${HOME}/.vscode-server/extensions"
+VSIX_DIR="${1}"
 
 mkdir -p ${OUT}
 mkdir -p ${TMP}
 
-for vsix in ./vsix/*.vsix; do
+for vsix in ${VSIX_DIR}/*.vsix; do
     NAME=${vsix##*/}
     NAME=${NAME%.*}
 
