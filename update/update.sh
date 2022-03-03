@@ -32,15 +32,17 @@ function zip_to_tar () {
     unzip ${ZIP_FILE} -d ${UNZIP_DIR}
 
     # tar
-    tar -zcvf "${UNZIP_DIR}.tar.gz" "${UNZIP_DIR}"
+    cd ${UNZIP_DIR}
+    mv "extension" ${UNZIP_DIR}
+    tar -zcvf "${UNZIP_DIR}.tar.gz" ${UNZIP_DIR}
 }
 
 function move_tar () {
     CURRENT_DIR=$(pwd)
     OUTPUT_DIR=$(cd "${OUTPUT_DIR}"; pwd)
     cd ${ZIP_DIR}
-    for tar in */*.tar.gz; do
-        mv ${tar} ${OUTPUT_DIR}/${tar}
+    for tar in */*/*.tar.gz; do
+        mv ${tar} ${OUTPUT_DIR}/${tar%%/*}/
     done
     cd ${CURRENT_DIR}
 }

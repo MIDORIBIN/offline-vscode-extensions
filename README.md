@@ -2,8 +2,6 @@
 
 ## TODO
 
-* 依存ライブラリの確認
-
 ## dependence
 
 * wget
