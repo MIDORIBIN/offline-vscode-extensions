@@ -1,7 +1,6 @@
 #/bin/bash
 set -euox pipefail
-# cd "$(dirname "$0")"
-cd /tmp
+cd "$(dirname "$0")"
 
 URL="https://github.com/MIDORIBIN/offline-vscode-extensions/tarball/main"
 wget --no-check-certificate -O - ${URL} | tar zxvf -
@@ -47,3 +46,5 @@ for vsix in ${CONTAINER_VSIX_DIR}/*.tar.gz; do
     tar xvzf ${vsix} -C ${OUT}
 done
 
+cd ../
+rm -r MIDORIBIN-offline-vscode-extensions-*

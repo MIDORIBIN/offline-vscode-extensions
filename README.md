@@ -21,7 +21,7 @@ docker run --rm -it -v ${PWD}:/work -w /work python:3.10.2 bash -c "update/updat
 ## 動作確認用
 
 ```sh
-docker run --rm -it -v ${PWD}:/work:ro -w /work ubuntu:18.04 bash
+docker run --rm -it -v ${PWD}:/work -w /work ubuntu:18.04 bash
 ```
 
 ```
