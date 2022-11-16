@@ -15,6 +15,7 @@ def download_all_vsix():
         'container': [
             'https://marketplace.visualstudio.com/items?itemName=ms-python.python',
             'https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance',
+            'https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools',
         ],
         'host': [
             'https://marketplace.visualstudio.com/items?itemName=alefragnani.project-manager',
