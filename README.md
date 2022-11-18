@@ -9,11 +9,11 @@
 ## インストール
 
 ```sh
-wget -O - https://raw.githubusercontent.com/MIDORIBIN/offline-vscode-extensions/main/install.sh | bash -s host
+wget -O - https://raw.githubusercontent.com/MIDORIBIN/offline-vscode-extensions/main/install.sh | bash -s -- host
 ```
 
 ```sh
-wget -O - https://raw.githubusercontent.com/MIDORIBIN/offline-vscode-extensions/main/install.sh | bash -s container
+wget -O - https://raw.githubusercontent.com/MIDORIBIN/offline-vscode-extensions/main/install.sh | bash -s -- container
 ```
 
 ## 更新用
