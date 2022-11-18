@@ -9,7 +9,11 @@
 ## インストール
 
 ```sh
-wget -O - https://raw.githubusercontent.com/MIDORIBIN/offline-vscode-extensions/main/install.sh | bash
+wget -O - https://raw.githubusercontent.com/MIDORIBIN/offline-vscode-extensions/main/install.sh | bash -s host
+```
+
+```sh
+wget -O - https://raw.githubusercontent.com/MIDORIBIN/offline-vscode-extensions/main/install.sh | bash -s container
 ```
 
 ## 更新用
@@ -25,7 +29,7 @@ docker run --rm -it -v ${PWD}:/work -w /work ubuntu:18.04 bash
 ```
 
 ```
-sed -i 's@archive.ubuntu.com@ftp.jaist.ac.jp/pub/Linux@g' /etc/apt/sources.list
-apt update && apt install -y wget python3
+sed -i 's@archive.ubuntu.com@ftp.jaist.ac.jp/pub/Linux@g' /etc/apt/sources.list && \
+apt update && apt install -y wget python3 && \
 ./install.sh
 ```
