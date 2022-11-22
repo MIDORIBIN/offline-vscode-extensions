@@ -12,6 +12,9 @@ if [ ${1} != "host" ] && [ ${1} != "container" ]; then
     exit 1
 fi
 
+URL="https://github.com/MIDORIBIN/offline-vscode-extensions/tarball/main"
+wget --no-check-certificate -O - ${URL} | tar zxvf -
+cd MIDORIBIN-offline-vscode-extensions-*
 
 OUT="${HOME}/.vscode-server/extensions"
 COMMON_VSIX_DIR="vsix/common"
@@ -32,3 +35,6 @@ function untar() {
 for vsix in "${VISXS[@]}"; do
     untar ${OUT} ${vsix}
 done
+
+cd ../
+rm -r MIDORIBIN-offline-vscode-extensions-*
