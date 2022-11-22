@@ -16,6 +16,7 @@ def download_all_vsix():
             'https://marketplace.visualstudio.com/items?itemName=ms-python.python',
             'https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance',
             'https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools',
+            'https://marketplace.visualstudio.com/items?itemName=mesonbuild.mesonbuild',
         ],
         'host': [
             'https://marketplace.visualstudio.com/items?itemName=alefragnani.project-manager',
