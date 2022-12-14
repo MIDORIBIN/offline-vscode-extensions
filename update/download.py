@@ -11,6 +11,9 @@ def download_all_vsix():
     type_urls = {
         'common': [
             'https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory',
+            'https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker',
+            'https://marketplace.visualstudio.com/items?itemName=ionutvmi.path-autocomplete',
+            'https://marketplace.visualstudio.com/items?itemName=IBM.output-colorizer',
         ],
         'container': [
             'https://marketplace.visualstudio.com/items?itemName=ms-python.python',
